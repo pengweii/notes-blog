@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaBars } from "react-icons/fa"
 const Sidebar = ({ isOpen }) => {
   return (
     <nav className={`sidebar ${isOpen ? "showSidebar" : ""}`}>

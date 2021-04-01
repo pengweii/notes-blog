@@ -29,17 +29,11 @@ const myQuery = graphql`
 `
 
 const Left = () => {
-  const sidebarArr = []
   const {
     allDirectory: { edges: categories },
     allMdx: { edges: contents },
   } = useStaticQuery(myQuery)
 
-  categories.map(node => {
-    sidebarArr.push(node.name)
-  })
-  console.log(sidebarArr)
-  console.log(categories)
   let tag
   return (
     <div className="column note-left">
