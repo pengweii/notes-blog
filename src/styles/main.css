@@ -1,0 +1,279 @@
+/*
+=============
+Global Styles
+=============
+*/
+@font-face {
+  font-family: "iconfont"; /* project id 2432451 */
+  src: url("//at.alicdn.com/t/font_2432451_311761zky5.eot");
+  src: url("//at.alicdn.com/t/font_2432451_311761zky5.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_2432451_311761zky5.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_2432451_311761zky5.woff") format("woff"),
+    url("//at.alicdn.com/t/font_2432451_311761zky5.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_2432451_311761zky5.svg#iconfont") format("svg");
+}
+
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.14rem;
+  font-family: "Oppo";
+  font-weight: 100;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.content {
+  margin-top: 0.44rem;
+}
+@font-face {
+  font-family: "Mi";
+  src: url("./fonts/xiaomi.ttf");
+}
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/futura/Futura LT Bold.ttf");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/futura/Futura LT Heavy.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/futura/Futura\ LT\ Medium.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Oppo";
+  src: url("./fonts/oppo/OPPOSans-L.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Oppo";
+  src: url("./fonts/oppo/OPPOSans-R.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Oppo";
+  src: url("./fonts/oppo/OPPOSans-M.ttf");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Oppo";
+  src: url("./fonts/oppo/OPPOSans-B.ttf");
+  /* font-weight: bolder; */
+}
+
+/*
+=============
+Navbar
+=============
+*/
+.navbar {
+  height: 0.44rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-container {
+  width: 90vw;
+  display: flex;
+  height: 0.44rem;
+
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-toggle {
+  font-size: 0.18rem;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background: transparent;
+  width: 0.2rem;
+  height: 0.2rem;
+  color: cornflowerblue;
+  display: none;
+}
+.nav-toggle:hover {
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+}
+.page-link {
+  margin: 0 0.1rem;
+  color: #f5f5f7;
+}
+.nav-socials {
+  display: flex;
+}
+.social-link {
+  margin: 0 0.1rem;
+  color: #f5f5f7;
+}
+.sidebar {
+  position: fixed;
+  background: #ddd;
+  padding: 0.1rem;
+  width: 100%;
+  z-index: 99;
+  transform: translateY(-100%);
+  visibility: hidden;
+}
+.showSidebar {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-socials {
+    display: none;
+  }
+  .nav-header {
+    display: flex;
+    width: 100%;
+  }
+  .sidebar {
+    position: fixed;
+    background: #ddd;
+    padding: 0.1rem;
+    width: 100%;
+    z-index: 99;
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  .showSidebar {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/*
+=============
+Home
+=============
+*/
+.home-top {
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem 0.3rem;
+}
+.home-top-left {
+  font-family: "Futura";
+  font-size: "1rem";
+  font-weight: bold;
+  color: #10a39e;
+}
+
+/*
+=============
+Notes
+=============
+*/
+.note-container {
+  display: flex;
+  justify-content: space-between;
+}
+.column {
+  min-height: 1rem;
+  /* display: flex;
+  justify-content: center; */
+}
+.note-left {
+  width: 1.8rem;
+  color: #ddd;
+  background: rgb(80, 80, 80);
+  padding-left: 0.05rem;
+}
+.note-center {
+  flex: 1;
+  padding: 0.2rem 0.3rem;
+}
+.note-right {
+  width: 200px;
+}
+.sidebar-link {
+  display: block;
+  color: #ddd;
+  padding: 0 0.05rem;
+}
+.sidebar-section {
+  margin-bottom: 0.2rem;
+}
+.sidebar-category {
+  /* border-bottom: 1px solid #7a7a7a; */
+  text-transform: uppercase;
+  padding: 0.05rem;
+  color: #2997ff;
+  /* color: rgb(244, 81, 30); */
+  /* color: rgb(216, 71, 27); */
+  /* font-weight: bold; */
+}
+@media screen and (max-width: 800px) {
+  .note-right {
+    display: none;
+  }
+}
+
+/*
+=============
+Markdown
+=============
+*/
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  line-height: 2;
+}
+
+blockquote {
+  background: rgb(245, 242, 243);
+  padding: 0.05rem;
+}
+th,
+td {
+  border: 1px solid #333;
+}
+
+p code {
+  background: rgb(245, 242, 243);
+  color: rgb(85, 142, 218);
+  border-radius: 0.04rem;
+}
