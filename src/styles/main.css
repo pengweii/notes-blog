@@ -1,26 +1,28 @@
+:root {
+  --color-blue: #037ef3;
+  --color-orange: #ff9966;
+  --color-dark: #3c3c3c;
+  --color-gatsby-purple: #8a4baf;
+  --color-gatsby-green: #37b635;
+  --color-gatsby-lakegreen: #10a39e;
+  --color-gatsby-blue: #0d96f2;
+  --color-gatsby-rose: #bc027f;
+}
+
 /*
 =============
 Global Styles
 =============
 */
-@font-face {
-  font-family: "iconfont"; /* project id 2432451 */
-  src: url("//at.alicdn.com/t/font_2432451_311761zky5.eot");
-  src: url("//at.alicdn.com/t/font_2432451_311761zky5.eot?#iefix")
-      format("embedded-opentype"),
-    url("//at.alicdn.com/t/font_2432451_311761zky5.woff2") format("woff2"),
-    url("//at.alicdn.com/t/font_2432451_311761zky5.woff") format("woff"),
-    url("//at.alicdn.com/t/font_2432451_311761zky5.ttf") format("truetype"),
-    url("//at.alicdn.com/t/font_2432451_311761zky5.svg#iconfont") format("svg");
-}
 
 html {
   font-size: 100px;
 }
 body {
-  font-size: 0.14rem;
-  font-family: "Oppo";
-  font-weight: 100;
+  font-size: 0.15rem;
+  font-family: "Smartisan";
+  font-weight: 200;
+  line-height: 1.6em;
 }
 * {
   margin: 0;
@@ -31,6 +33,9 @@ ul {
 }
 a {
   text-decoration: none;
+}
+p {
+  margin-top: 0.05rem;
 }
 .content {
   margin-top: 0.44rem;
@@ -73,6 +78,61 @@ a {
   font-family: "Oppo";
   src: url("./fonts/oppo/OPPOSans-B.ttf");
   /* font-weight: bolder; */
+}
+
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Regular.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Smartisan";
+  src: url("./fonts/smartisan/Smartisan_Compact-Heavy.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Consola";
+  src: url("./fonts/consola.ttf");
+}
+@font-face {
+  font-family: "Menlo";
+  src: url("./fonts/menlo/Menlo-Regular-1.ttf");
+}
+@font-face {
+  font-family: "Menlo";
+  src: url("./fonts/menlo/Menlo-Bold-2.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Menlo";
+  src: url("./fonts/menlo/Menlo-Italic-4.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Menlo";
+  src: url("./fonts/menlo/Menlo-BoldItalic-3.ttf");
+  font-style: italic;
+  font-weight: bold;
 }
 
 /*
@@ -185,6 +245,21 @@ Navbar
 
 /*
 =============
+Footer
+=============
+*/
+.footer {
+  height: 0.44rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(14.5px);
+}
+
+/*
+=============
 Home
 =============
 */
@@ -196,7 +271,7 @@ Home
 }
 .home-top-left {
   font-family: "Futura";
-  font-size: "1rem";
+  font-size: 600%;
   font-weight: bold;
   color: #10a39e;
 }
@@ -276,4 +351,14 @@ p code {
   background: rgb(245, 242, 243);
   color: rgb(85, 142, 218);
   border-radius: 0.04rem;
+}
+
+pre {
+  font-family: "Menlo";
+  font-size: 0.14rem;
+  padding: 0.12rem 0.12rem;
+  border-radius: 0.05rem;
+}
+.token-line {
+  line-height: 140%;
 }

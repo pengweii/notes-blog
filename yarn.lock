@@ -9063,6 +9063,11 @@ pretty-format@^25.5.0:
     ansi-styles "^4.0.0"
     react-is "^16.12.0"
 
+prism-react-renderer@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/prism-react-renderer/download/prism-react-renderer-1.2.0.tgz?cache=0&sync_timestamp=1613833145231&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprism-react-renderer%2Fdownload%2Fprism-react-renderer-1.2.0.tgz#5ad4f90c3e447069426c8a53a0eafde60909cdf4"
+  integrity sha1-WtT5DD5EcGlCbIpToOr95gkJzfQ=
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/process-nextick-args/download/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
