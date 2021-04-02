@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import logo from "./images/banner.svg"
+import logo from "./images/top.jpg"
 
 export default function Home({ data }) {
   return (
