@@ -142,3 +142,6 @@ export default function BlogPost({ data }) {
 |  ----  | ----  |
 | 单元格  | 单元格 |
 | 单元格  | 单元格 |
+
+![image-20210403161129842](/Users/pengwei/Desktop/notes-blog/src/notes/z-others/mdx.assets/image-20210403161129842.png)
+

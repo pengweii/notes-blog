@@ -1,0 +1,45 @@
+---
+title: react basics
+date: 2021-04-03
+---
+
+## useState
+
+### Object
+
+在修改Object时，要避免覆盖原来的数据。需要使用解构运算符，或者使用多组state。
+
+```js
+import React, { useState } from 'react';
+
+const UseStateObject = () => {
+  const [person, setPerson] = useState({
+    name: 'Peter',
+    age: 24,
+    message: 'random message',
+  });
+  
+  // const [name,setName] = useState('peter')
+  // const [age,setAge] = useState(24)
+  // const [message,setMessage] = useState('random message')
+
+  const changeMessage = () => {
+    setPerson({ ...person, message: 'hello world' });
+    // setMessage('hello world')
+  };
+  return (
+    <>
+      <h3>{person.name}</h3>
+      <h3>{person.age}</h3>
+      <h3>{person.message}</h3>
+      <button className="btn" onClick={changeMessage}>
+        change message
+      </button>
+    </>
+  );
+};
+
+export default UseStateObject;
+```
+
+![image-20210403161943492](/Users/pengwei/Desktop/notes-blog/src/notes/react/react-basic.mdx.assets/image-20210403161943492.png)
