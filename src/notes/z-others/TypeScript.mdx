@@ -3,8 +3,9 @@ title: TypeScript
 date: 2021-04-08
 ---
 
+## 基本类型和对象类型
+
 ```TypeScript
-/*
 // 基础类型：number, string, null, undefined, symbol, boolean, void
 const num: number = 123;
 const teacherName: string = 'Dell';
@@ -34,7 +35,11 @@ const func1: (str: string) => number = (str) => {
 const func2 = (str: string): number => {
   return parseInt(str, 10);
 };
+```
 
+## 类型注解和类型推断
+
+```ts
 // type annotation 类型注解：我们来告诉TS变量是什么类型
 let count1: number;
 count1 = 123;
@@ -54,69 +59,86 @@ function getTotal2(num1: number, num2: number) {
 
 const total = getTotal2(1, 2);
 */
+```
 
-/*
+## 和函数相关的类型
+
+```ts
 // 函数相关
 // 函数定义和js中一样，主要有3种
 function hello() {}
-const hello1 = function() {}
+const hello1 = function () {}
 const hello2 = () => {}
 
 // 最后的number可以不写，可通过类型推断推断出来
 // 但是为了安全起见，还是写上比较好。因为在做逻辑处理时可能代码写错。
 function add(first: number, second: number): number {
-  return first + second;
+  return first + second
 }
 
 // 常用函数类型还有void、never等
 function sayHello(): void {
-  console.log('hello');
+  console.log("hello")
 }
 
 // never: 函数永远不可能执行完或者会抛出异常时使用
 function errorEmitter(): never {
-  throw new Error();  // while(true) {}
-  console.log('123');
+  throw new Error() // while(true) {}
+  console.log("123")
 }
-*/
 
 // 解构的类型注解
 function add({ first, second }: { first: number; second: number }): number {
-  return first + second;
+  return first + second
 }
-const total = add({ first: 1, second: 2 });
+const total = add({ first: 1, second: 2 })
 
 // 解构一个变量时要注意
 function getNumber({ first }: { first: number }): number {
-  return first;
+  return first
 }
+```
 
+## 其他情况
+
+```ts
 // 其他：Date类型等
-const data = new Date();
+const data = new Date()
 
 // 其他的case: 比如用JSON.parse等函数时无法进行类型推断，要使用类型注解
 interface Person {
-  name: 'string';
+  name: "string"
 }
-const rawData = '{"name":"Dell"}';
-const newData = JSON.parse(rawData); // 类型推断无法使用，newDate为any类型
-const newData2: Person = JSON.parse(rawData); // newDate2为Person类型
+const rawData = '{"name":"Dell"}'
+const newData = JSON.parse(rawData) // 类型推断无法使用，newDate为any类型
+const newData2: Person = JSON.parse(rawData) // newDate2为Person类型
 
-let temp: number | string = 123;
-temp = '456';
+let temp: number | string = 123
+temp = "456"
+```
 
-// 类型断言
-// 有时候你会遇到这样的情况，你会比TypeScript更了解某个值的详细信息。
-// 通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。
-// 通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。
-// 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。
-// 它没有运行时的影响，只是在编译阶段起作用。 TypeScript会假设你已经进行了必须的检查。
+## 类型断言
 
-// 类型断言有两种形式。 其一是“尖括号”语法：
-let someValue: any = 'this is a string';
-let strLength: number = (<string>someValue).length;
+有时候你会遇到这样的情况，你会比 TypeScript 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。
+通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。
+它没有运行时的影响，只是在编译阶段起作用。 TypeScript 会假设你已经进行了必须的检查。
 
-// 另一个为as语法：(当在TypeScript里使用JSX时，只有as语法断言是被允许的)
-let someValue2: any = 'this is a string';
-let strLength2: number = (someValue as string).length;
+类型断言有两种形式。 其一是“尖括号”语法：
+
+```ts
+let someValue: any = "this is a string"
+let strLength: number = (<string>someValue).length
+```
+
+另一个为 as 语法：(当在 TypeScript 里使用 JSX 时，只有 as 语法断言是被允许的)
+
+```ts
+let someValue2: any = "this is a string"
+let strLength2: number = (someValue as string).length
+```
+
+## interface
+
+```ts
+interface Person {}
 ```

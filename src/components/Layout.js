@@ -9,12 +9,12 @@ const Layout = ({ children }) => {
     setIsOpen(!isOpen)
   }
   return (
-    <Fragment>
+    <div className="bodyContainer">
       <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} />
-      <main className="content">{children}</main>
+      <main className="noteContainer">{children}</main>
       <Footer />
-    </Fragment>
+    </div>
   )
 }
 

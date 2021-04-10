@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 const Footer = ({ toggle }) => {
   return (
     <nav className="footer">
-      <div className="footer-container"></div>
+      <div>Footer</div>
     </nav>
   )
 }
